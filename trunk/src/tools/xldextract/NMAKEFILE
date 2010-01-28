@@ -1,0 +1,23 @@
+
+OBJS = xldextract.obj xld.obj
+CC = cl
+CFLAGS = /c
+EXE = xldextract.exe
+RM = del /Q
+
+all: $(EXE)
+
+$(EXE): $(OBJS)
+	$(CC) /o $(EXE) $(OBJS) /link
+
+xldextract.obj : xldextract.c
+	$(CC) $(CFLAGS) xldextract.c 
+
+xld.obj : ../../shared/xld.c
+	$(CC) $(CFLAGS) ../../shared/xld.c 
+
+clean:
+	$(RM) $(OBJS)
+	
+reallyclean: clean
+	$(RM) $(EXE)

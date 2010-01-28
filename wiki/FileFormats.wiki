@@ -25,6 +25,12 @@ Each record is 60 bytes long and there are 463 records.
 ||21||20||English text||
 ||41||20||French text||
 
+== ITEMDATA ==
+
+There are 463 records this file and each record is 40 bytes long.
+
+The structure is not currently mapped.
+
 == ITEMGFX ==
 
 Each item has an icon associated with it. Each image is 32x32 pixels in size with one byte per pixel. The images are indexed against a 256 color palette.

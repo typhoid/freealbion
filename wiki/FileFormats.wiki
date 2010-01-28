@@ -13,6 +13,7 @@ Because of this, few (if any) of the data files are encrypted. This page documen
 ||7||2||entries||The number of objects stored within the archive.||
 ||9||entries `*` 4||lengths||A list of long integers (4 bytes) which store the length of the stored object.|||
 
+The rest of the file contains the stored objects, one after another. There is no compression.
 
 == ITEMNAME.DAT ==
 

@@ -31,3 +31,16 @@ Each record is 60 bytes long and there are 463 records.
 Each item has an icon associated with it. Each image is 32x32 pixels in size with one byte per pixel. The images are indexed against a 256 color palette.
 
 As yet I have not determined which palette.
+
+
+== PALETTE.000 ==
+
+This file contains 64 colors with 1 byte per component (r, g, ) per color. 
+
+||*Offset*||*Length*||*Description*||
+||0||1||Red||
+||1||||Green||
+||2||1||Blue||
+
+There is no alpha channel.
+

@@ -1,0 +1,14 @@
+
+Linux/OSX:
+
+	make all
+	
+	
+Windows:
+
+Ensure that the Microsoft compilers are in your search path, usually just be running the Visual Studio command prompt.
+
+	nmake /f NMAKEFILE all
+
+
+	

@@ -21,9 +21,10 @@ Foundation, Inc., 51 Franklin Street, Fifth Floor, Boston, MA  02110-1301, USA.
 #include <assert.h>
 #include "../../shared/types.h"
 #include "../../shared/xld.h"
-// #include "../../shared/palette.h"
 
- static uint32_t	palettes[54][256];
+#define ALBION_PALETTE_COUNT		56
+
+ static uint32_t	palettes[ALBION_PALETTE_COUNT][256];
  
  int main(int argc, const char *argv[]) {
  		
@@ -31,6 +32,12 @@ Foundation, Inc., 51 Franklin Street, Fifth Floor, Boston, MA  02110-1301, USA.
  	uchar_t		custom[576];	// 3 x 192  = 576
  								// 192 + 64 = 256
  		
+ 	
+ 	XldArchive	*xld;
+ 	XldEntry	e;
+ 	int 		n = 0;
+	int			x = 0;
+
  	// load the shared palette
  	FILE *fp = fopen("PALETTE.000", "rb");
  	
@@ -45,11 +52,7 @@ Foundation, Inc., 51 Franklin Street, Fifth Floor, Boston, MA  02110-1301, USA.
  		fprintf(stderr, "error: unable to open shared palette.\n");
  		return EXIT_FAILURE;	
  	}
- 	
- 	XldArchive	*xld;
- 	XldEntry	e;
- 	int 		n = 0;
- 	
+
  	xld = XldOpen("PALETTE0.XLD");
  	
  	if (xld) {
@@ -62,17 +65,17 @@ Foundation, Inc., 51 Franklin Street, Fifth Floor, Boston, MA  02110-1301, USA.
  			// now transfer the shared and custom palettes into the appropriate
  			// global palette. use the entry index as the palette index, as thats
  			// what they appear to use in the game.
- 			for (n=0;n<64;n++) {
+ 			for (n=0;n<192;n+=3) {
  				palettes[e.index][n] = shared[n];
-				palettes[e.index][n] = shared[n + 1];
-				palettes[e.index][n] = shared[n + 2];	
+				palettes[e.index][n + 1] = shared[n + 1];
+				palettes[e.index][n + 2] = shared[n + 2];
  			}
  			
  			// copy the custom palete data
- 			for (n=0;n<192;n++) {
+ 			for (n=0;n<576;n+=3) {
 				palettes[e.index][n] = custom[n];
-				palettes[e.index][n] = custom[n + 1];
-				palettes[e.index][n] = custom[n + 2];	
+				palettes[e.index][n + 1] = custom[n + 1];
+				palettes[e.index][n + 2] = custom[n + 2];	
  			}
  			
  		}
@@ -80,8 +83,16 @@ Foundation, Inc., 51 Franklin Street, Fifth Floor, Boston, MA  02110-1301, USA.
  		// all palettes should now be loaded
  		XldClose(xld);	
  		
- 		printf("All palettes loaded.\n");
- 		
+ 		fprintf(stdout, "All palettes loaded.\n");
+
+		for (n=0;n<ALBION_PALETTE_COUNT;n++) {
+			fprintf(stdout, "Palette %d\n\n", n);
+			for (x=0;x<=256;x++) {
+				fprintf(stdout, "%02X ", palettes[n][x]);
+			}
+			fprintf(stdout, "\n\n\n");
+		}
+
  	} else {
  		fprintf(stderr, "error: unable to open archive.\n");
  		return EXIT_FAILURE;

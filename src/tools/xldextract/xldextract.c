@@ -22,6 +22,7 @@
  * TODO: need to be able to specify the output file extension
  */
 #include <stdio.h>
+#include <string.h>
 #include "../../shared/types.h"
 #include "../../shared/xld.h"
 

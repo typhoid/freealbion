@@ -1,26 +1,27 @@
 /*
-	Xld archive extraction utility.
-	Copyright (C) 2010 Neil Ramsbottom
+Copyright (C) 2010 Neil Ramsbottom
 
-	This program is free software; you can redistribute it and/or
-	modify it under the terms of the GNU General Public License
-	as published by the Free Software Foundation; either version 2
-	of the License, or (at your option) any later version.
+This program is free software; you can redistribute it and/or
+modify it under the terms of the GNU General Public License
+as published by the Free Software Foundation; either version 2
+of the License, or (at your option) any later version.
 
-	This program is distributed in the hope that it will be useful,
-	but WITHOUT ANY WARRANTY; without even the implied warranty of
-	MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE.  See the
-	GNU General Public License for more details.
+This program is distributed in the hope that it will be useful,
+but WITHOUT ANY WARRANTY; without even the implied warranty of
+MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE.  See the
+GNU General Public License for more details.
 
-	You should have received a copy of the GNU General Public License
-	along with this program; if not, write to the Free Software
-	Foundation, Inc., 51 Franklin Street, Fifth Floor, Boston, MA  02110-1301, USA.
+You should have received a copy of the GNU General Public License
+along with this program; if not, write to the Free Software
+Foundation, Inc., 51 Franklin Street, Fifth Floor, Boston, MA  02110-1301, USA.
+
 */
+
 /*
  *
- * TODO: Need to be able to specify the output directory on the command line.
- * TODO: need to be able to specify the output file extension
+ * TODO: output filename should be more configurable
  */
+
 #include <stdio.h>
 #include <string.h>
 #include "../../shared/types.h"
@@ -45,7 +46,7 @@ static int SaveToFile(const char *filename, ulong_t length, uchar_t *data) {
 } //
 
 static void Usage(int argc, const char *argv[]) {
-	fprintf(stderr, "usage: %s <archive>\n\n", argv[0]);
+	fprintf(stderr, "usage: %s <archive> <extension> <directory>\n\n", argv[0]);
 }
 
 int main(int argc, const char* argv[])
@@ -53,20 +54,29 @@ int main(int argc, const char* argv[])
 	XldArchive *xld;
 	XldEntry	entry;
 	uchar_t		data[20*1024];	// NGR: Not happy about using a static size, but also not happy about having a huge memory buffer
-	char		filename[128];
+	char		filename[255];
 	int			index;
 	int			verbose = 0;
 
+	const char 	*source;
+	const char	*extension;
+	const char 	*directory;
+			char *tmp;
+	fprintf(stdout, "\n");
 	fprintf(stdout, "XLD Extraction Utility\n");
 	fprintf(stdout, "Copyright (c)2010 FreeAlbion project.\n\n");
 
-	if (argc < 2) {
+	if (argc < 4) {
 		// needs more parameters
 		Usage(argc, argv);
 		return EXIT_FAILURE;
+	} else {
+		directory = argv[3];
+		extension = argv[2];
+		source = argv[1];
 	}
 
-	xld = XldOpen(argv[1]);
+	xld = XldOpen(source);
 
 	if (xld != NULL) {
 
@@ -78,14 +88,14 @@ int main(int argc, const char* argv[])
 
 			index++;
 
-			sprintf(filename, "./out/test%d.mid", index);
+			sprintf(filename, "%s/out%d.%s", directory, index, extension);
 
 			if (verbose) {
 				fprintf(stdout, "extracting entry %d\n", index);
 				fprintf(stdout, "\toffset: %d\n", entry.offset);
 				fprintf(stdout, "\tlength: %d\n", entry.length);
 
-				fprintf(stdout, "Extracting entry %d to %s\n", index, strrchr(filename, '/') + 1);
+				//fprintf(stdout, "Extracting entry %d to %s\n", index, strrchr(filename, '/') + 1);
 			}
 
 			if (XldGetEntryData(entry.index, xld, data) != NULL) {

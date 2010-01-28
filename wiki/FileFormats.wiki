@@ -40,7 +40,7 @@ As yet I have not determined which palette.
 
 == PALETTE.000 ==
 
-This file contains 64 colors with 1 byte per component (r, g, ) per color. 
+This file contains 64 colors with 1 byte per component (r, g, b) per color. 
 
 ||*Offset*||*Length*||*Description*||
 ||0||1||Red||

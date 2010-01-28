@@ -112,11 +112,11 @@ int main(int argc, const char* argv[])
 
 		fprintf(stdout, "Extraction complete.\n\n");
 
+		XldClose(xld);
+
 	} else {
 		fprintf(stderr, "error: unable to open archive.\n\n");
 	}
-
-	XldClose(xld);
 
 	return EXIT_SUCCESS;
 }

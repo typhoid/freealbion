@@ -21,8 +21,10 @@ Foundation, Inc., 51 Franklin Street, Fifth Floor, Boston, MA  02110-1301, USA.
 
 	typedef signed char		int8_t;
 	typedef signed short	int16_t;
-	typedef signed long		int32_t;
 
+#ifdef WIN32
+	typedef signed long		int32_t;
+#endif
 	typedef signed long		long_t;
 	typedef signed char		char_t;
 

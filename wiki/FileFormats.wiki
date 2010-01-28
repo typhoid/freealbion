@@ -7,7 +7,6 @@ Albion was developed back in 1995 when piracy of PC games was on a much smaller 
 These pages attempt to document some of the different file formats used by the game.
 
 == XLD Archives ==
-
 ||*Offset*||*Length*||*Name*||*Description*||
 ||0||4||magic||Magic number. The file signature (XLD0).||
 ||5||1||unknown||||
@@ -45,4 +44,3 @@ This file contains 64 colors with 1 byte per component (r, g, ) per color.
 There is no alpha channel.
 
 It is worth noting that each of the entries in PALETTE0.XLD is the same format as this, except that they contain 192 colours. They are merged with this palette to form a 256 colour palette.
-

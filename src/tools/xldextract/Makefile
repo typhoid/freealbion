@@ -1,7 +1,7 @@
 
 OBJS = xldextract.o xld.o
 CC = gcc
-CFLAGS =
+CFLAGS = -c
 EXE = xldextract
 RM = rm -f
 
@@ -10,10 +10,10 @@ all: $(EXE)
 $(EXE): $(OBJS)
 	$(CC) -o $(EXE) $(OBJS)
 
-xldextract.obj : xldextract.c
+xldextract.o : xldextract.c
 	$(CC) $(CFLAGS) xldextract.c 
 
-xld.obj : ../../shared/xld.c
+xld.o : ../../shared/xld.c
 	$(CC) $(CFLAGS) ../../shared/xld.c 
 
 clean:

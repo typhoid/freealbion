@@ -51,7 +51,7 @@ There is no alpha channel.
 
 It is worth noting that each of the entries in PALETTE0.XLD is the same format as this, except that they contain 192 colours. They are merged with this palette to form a 256 colour palette.
 
-== SPELLDATA ==
+== SPELLDAT.DAT ==
 
 Unknown format. This file is 1050 bytes long and there are 53 spells in the game.
 

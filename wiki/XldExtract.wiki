@@ -21,6 +21,10 @@ xldextract <archive> <extension> <directory>
   * Linux
   * OSX
 
+== Source ==
+
+The source is available [http://code.google.com/p/freealbion/source/browse/#svn/trunk/src/tools/xldextract here]
+
 == Current Limitations ==
 
 The code needs a little work, which I am going to do very soon but because of this there are some caveats you should be aware of.

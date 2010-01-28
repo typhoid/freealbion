@@ -17,9 +17,9 @@ xldextract <archive> <extension> <directory>
 
 == Supported On ==
 
-  # Windows
-  # Linux
-  # OSX
+  * Windows
+  * Linux
+  * OSX
 
 == Current Limitations ==
 

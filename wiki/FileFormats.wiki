@@ -31,7 +31,7 @@ There are 463 records this file and each record is 40 bytes long.
 
 ||*Offset*||*Length*||*Name*||*Description*||
 ||0||1||unknown||||
-||1||1||typeid||Item type.||
+||1||1||typeid||[Items#Types Item type]||
 ||2||1||unknown||||
 ||3||1||unknown||||
 ||4||1||gender||Determines which gender can use this item. 2 = female, 3 = any||
@@ -41,7 +41,7 @@ There are 463 records this file and each record is 40 bytes long.
 ||8||1||attributeType||Attribute bonus type.||
 ||9||1||attributeBonus||Attribute bonus value.||
 ||11||1||skillType||Skill bonus type.||
-||12||1||skillBonuys||Skill bonus value.||
+||12||1||skillBonus||Skill bonus value.||
 ||13||1||protection||Protection from physical damage.||
 ||14||1||damage||Physical damage caused.||
 ||15||1||unknown||unknown||

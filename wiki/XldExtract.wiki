@@ -1,17 +1,30 @@
 #summary Documentation for the XldExtract utility
 
-= XldExtract =
+= Overview =
 
 This is a utility for extracting the data from XLD archives to allow it to be analysed further and the test application for the XLD extraction code that's shared between other tools.
 
 == Usage ==
 
-Presently the only argument is the path to the XLD archive that you wish to have extracted.
+{{{
+xldextract <archive> <extension> <directory>
+}}}
+
+||Parameter||Description||Example||
+||archive||The XLD archive from which the content should be extracted.||SONGS0.XLD||
+||extension||The desired extension that the output files should have.||mid||
+||directory||The directory into which the extracted files should be saved.||c:\temp\||
+
+== Supported On ==
+
+  # Windows
+  # Linux
+  # OSX
 
 == Current Limitations ==
 
 The code needs a little work, which I am going to do very soon but because of this there are some caveats you should be aware of.
 
-  # You must create a directory named 'out' in your working directory. The utility outputs all it's extracted content there at the moment.
+  # All extracted content is named outN.ext where N is the position of the file in the archive, ext is the specified file extension. The 'out' part of the file name is static.
 
-  # All extracted content be named testN.mid where N is the position of the file in the archive.
+  # Output file paths cannot exceed 255 characters in length.

@@ -1,3 +1,17 @@
 #summary Documentation for the XldExtract utility
 
-= This content is being written! =
+= XldExtract =
+
+This is a utility for extracting the data from XLD archives to allow it to be analysed further and the test application for the XLD extraction code that's shared between other tools.
+
+== Usage ==
+
+Presently the only argument is the path to the XLD archive that you wish to have extracted.
+
+== Current Limitations ==
+
+The code needs a little work, which I am going to do very soon but because of this there are some caveats you should be aware of.
+
+  # You must create a directory named 'out' in your working directory. The utility outputs all it's extracted content there at the moment.
+
+  # All extracted content be named testN.mid where N is the position of the file in the archive.

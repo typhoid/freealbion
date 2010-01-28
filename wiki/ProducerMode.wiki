@@ -1,5 +1,7 @@
 #summary How to enable and use the built-in producer mode.
 
+<font color="red">*NOTE:* This refers to the original Albion executable and not FreeAlbion executables.</font>
+
 == Producer Mode ==
 
 Albion contains some hidden extras that were most likely used by the developers to assist them when developing and testing the game. You can gain extra gold, equipment, rations to name just a few of it's effects.

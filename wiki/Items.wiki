@@ -3,7 +3,7 @@
 
 = Items =
 
-There are 463 items in the game.
+There are 462 items in the game.
 
 == Types ==
 
@@ -43,5 +43,3 @@ To obtain the negative value, simply minus 127 from the negative value.
 {{{
   int value = (0x80 - 0x7f);
 }}}
-
-

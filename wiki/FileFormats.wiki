@@ -47,8 +47,8 @@ There are 463 records this file and each record is 40 bytes long.
 ||15||1||unknown||unknown||
 ||16||1||skillTax1Type||Skill Tax 1 Type||
 ||17||1||skillTax2Type||Skill Tax 2 Type||
-||18||1||skillTax1||Skill Tax 1 value. [Items#Ranged Values]||
-||19||1||skillTax2||Skill Tax 2 value. [Items#Ranged Values]||
+||18||1||skillTax1||Skill Tax 1 value. [Items#Ranged_Values]||
+||19||1||skillTax2||Skill Tax 2 value. [Items#Ranged_Values]||
 ||20||1||unknown||unknown||
 ||21||1||unknown||unknown||
 ||22||1||unknown||unknown||

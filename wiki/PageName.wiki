@@ -1,9 +1,0 @@
-#summary Albion downloads.
-
-= Downloading Albion =
-
-There are no downloads of the Albion data files available via this project. You must have the original data files to make use of any downlods from this project!
-
-= Why =
-
-Because I'm not sure of the legality of posting the data files. You can simply [http://lmgtfy.com/?q=Albion+downloads search Google] of course.

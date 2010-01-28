@@ -1,0 +1,15 @@
+#summary Overview of the Albion data file formats.
+
+= Introduction =
+
+Albion was developed back in 1995 when piracy of PC games was on a much smaller scale than it is today and a simple CD present check was sufficient to prevent piracy (nobody had a CD writer back then!)
+
+These pages attempt to document some of the different file formats used by the game.
+
+= XLD Archives =
+
+||*Offset*||*Length*||*Name*||*Description*||
+||0||4||magic||Magic number. The file signature (XLD0).||
+||5||1||unknown||||
+||7||2||entries||The number of objects stored within the archive.||
+||9||entries `*` 4||lengths||A list of long integers (4 bytes) which store the length of the stored object.|||

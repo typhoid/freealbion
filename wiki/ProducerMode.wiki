@@ -2,26 +2,26 @@
 
 == Producer Mode ==
 
-Albion contains some hidden extras that were most likely used by the developers to assist them when developing and testing the game. You can gain extras gold, equipment, rations to name just a few of it's effects.
+Albion contains some hidden extras that were most likely used by the developers to assist them when developing and testing the game. You can gain extra gold, equipment, rations to name just a few of it's effects.
 
 == How To Enable =
 
-# Start the game and go to the menu. 
-# Select options, and in the options-menu, just type "schnosm" on your keyboard (without the " ). Your screen will flash white one time, so you know it worked. 
-# Return to the game.
-# Press ALT+F12. If this works, you should see a picture of the producer (Thomas Hertzler) in the bottom right of the screen.
+  # Start the game and go to the menu. 
+  # Select options, and in the options-menu, just type "schnosm" on your keyboard (without the " ). Your screen will flash white one time, so you know it worked. 
+  # Return to the game.
+  # Press ALT+F12. If this works, you should see a picture of the producer (Thomas Hertzler) in the bottom right of the screen.
 
 == Effects ==
 
 When enabled, producer mode should have the following effects:
 
-* The Map is revealed, you can see persons and monsters on the map, and you can teleport everywhere by clicking on the map.
-* You can Walk through walls
-* You can reach everything whith the "use"-cursor
-* You can End fights and still get XP (Command in Battle)
-* Enemies can't engage you in battles
-* All spells are maxed out and only cost 1SP
-* You can deactivate this by using Alt + F12 again
+  * The Map is revealed, you can see persons and monsters on the map, and you can teleport everywhere by clicking on the map.
+  * You can Walk through walls
+  * You can reach everything whith the "use"-cursor
+  * You can End fights and still get XP (Command in Battle)
+  * Enemies can't engage you in battles
+  * All spells are maxed out and only cost 1SP
+  * You can deactivate this by using ALT + F12 again
 
 == Other Options ==
 

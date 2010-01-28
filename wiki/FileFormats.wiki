@@ -18,7 +18,7 @@ Because of this, few (if any) of the data files are encrypted. This page documen
 
 This file contains the names of all the items within the game. They are translated into English, German and French.
 
-Each record is 60 bytes long and there are 463 records.
+Each record is 60 bytes long and there are 462 records.
 
 ||*Offset*||*Length*||*Description*||
 ||0||20||German text||
@@ -27,7 +27,7 @@ Each record is 60 bytes long and there are 463 records.
 
 == ITEMLIST.DAT ==
 
-There are 463 records this file and each record is 40 bytes long.
+There are 462 records this file and each record is 40 bytes long.
 
 ||*Offset*||*Length*||*Name*||*Description*||
 ||0||1||unknown||||

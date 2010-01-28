@@ -14,7 +14,7 @@ Because of this, few (if any) of the data files are encrypted. This page documen
 ||9||entries `*` 4||lengths||A list of long integers (4 bytes) which store the length of the stored object.|||
 
 
-== ITEMNAMES ==
+== ITEMNAME.DAT ==
 
 The ITEMNAMES file contains the names of all the items within the game. They are translated into English, German and French.
 
@@ -25,7 +25,7 @@ Each record is 60 bytes long and there are 463 records.
 ||21||20||English text||
 ||41||20||French text||
 
-== ITEMDATA ==
+== ITEMLIST.DAT ==
 
 There are 463 records this file and each record is 40 bytes long.
 
@@ -54,3 +54,7 @@ It is worth noting that each of the entries in PALETTE0.XLD is the same format a
 == SPELLDATA ==
 
 Unknown format. This file is 1050 bytes long and there are 53 spells in the game.
+
+== SLAB ==
+
+This is a 300x200 indexed image. I believe it is used as the background of the main menu. The palette is unknown.

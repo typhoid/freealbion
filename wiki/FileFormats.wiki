@@ -29,7 +29,46 @@ Each record is 60 bytes long and there are 463 records.
 
 There are 463 records this file and each record is 40 bytes long.
 
-The structure is not currently mapped.
+||*Offset*||*Length*||*Name*||*Description*||
+||0||1||unknown||||
+||1||1||typeid||Item type.||
+||2||1||unknown||||
+||3||1||unknown||||
+||4||1||gender||Determines which gender can use this item. 2 = female, 3 = any||
+||5||1||unknown||||
+||6||1||lpMaxBonus||Bonus value to life points.||
+||7||1||lpMaxBonus||Bonus value to spell points.||
+||8||1||attributeType||Attribute bonus type.||
+||9||1||attributeBonus||Attribute bonus value.||
+||11||1||skillType||Skill bonus type.||
+||12||1||skillBonuys||Skill bonus value.||
+||13||1||protection||Protection from physical damage.||
+||14||1||damage||Physical damage caused.||
+||15||1||unknown||unknown||
+||16||1||skillTax1Type||Skill Tax 1 Type||
+||17||1||skillTax2Type||Skill Tax 2 Type||
+||18||1||skillTax1||Skill Tax 1 value. [#ranged value]||
+||19||1||skillTax2||Skill Tax 2 value. [#ranged value]||
+||20||1||unknown||unknown||
+||21||1||unknown||unknown||
+||22||1||unknown||unknown||
+||23||1||unknown||unknown||
+||24||1||spell||spell or enchantment on item||
+||25||1||charges||spell or enchantment charges available||
+||26||1||maxcharges||maxiumum spell or enchantment charges||
+||27||1||unknown||unknown||
+||28||1||unknown||unknown||
+||29||1||unknown||unknown||
+||30||1||unknown||unknown||
+||31||2||weight||weight of the item in grammes||
+||33||1||unknown||unknown||
+||34||1||unknown||unknown||
+||35||2||icon||Image for the item||
+||37||1||unknown||unknown||
+||38||1||unknown||unknown||
+||39||1||unknown||unknown||
+||40||1||unknown||unknown||
+
 
 == ITEMGFX ==
 
@@ -58,3 +97,5 @@ Unknown format. This file is 1050 bytes long and there are 53 spells in the game
 == SLAB ==
 
 This is a 300x200 indexed image. I believe it is used as the background of the main menu. The palette is unknown.
+
+

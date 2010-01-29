@@ -24,6 +24,7 @@ Foundation, Inc., 51 Franklin Street, Fifth Floor, Boston, MA  02110-1301, USA.
 
 #include <stdio.h>
 #include <string.h>
+#include <assert.h>
 #include "../../shared/types.h"
 #include "../../shared/xld.h"
 
@@ -53,7 +54,7 @@ int main(int argc, const char* argv[])
 {
 	XldArchive *xld;
 	XldEntry	entry;
-	uchar_t		data[20*1024];	// NGR: Not happy about using a static size, but also not happy about having a huge memory buffer
+	uchar_t		data[40*1024];	// NGR: Not happy about using a static size, but also not happy about having a huge memory buffer
 	char		filename[255];
 	int			index;
 	int			verbose = 0;
@@ -87,6 +88,9 @@ int main(int argc, const char* argv[])
 		while (NULL != XldGetNextEntry(xld, &entry)) {
 
 			index++;
+
+			assert(index >= 0);
+			assert(index <= xld->header.entries);
 
 			sprintf(filename, "%s/out%d.%s", directory, index, extension);
 

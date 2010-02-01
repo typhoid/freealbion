@@ -102,7 +102,7 @@ This is a 300x200 indexed image. I believe it is used as the background of the m
 
 == Intro Video ==
 
-The introduction video is encoded as a [http://www.radgametools.com/ Rad Game Tools] Smacker video. The playback software for this is commercially licensed however there is an open source implementation in the [ScummVM http://www.scummvm.org/] project.
+The introduction video is encoded as a [http://www.radgametools.com/ Rad Game Tools] Smacker video. The playback software for this is commercially licensed however there is an open source implementation in the [http://www.scummvm.org/ ScummVM] project.
 
 == Cutscenes ==
 

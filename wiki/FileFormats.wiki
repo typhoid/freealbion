@@ -99,3 +99,15 @@ Unknown format. This file is 1050 bytes long and there are 53 spells in the game
 == SLAB ==
 
 This is a 300x200 indexed image. I believe it is used as the background of the main menu. The palette is unknown.
+
+== Intro Video ==
+
+The introduction video is encoded as a [http://www.radgametools.com/ Rad Game Tools] Smacker video. The playback software for this is commercially licensed however there is an open source implementation in the [ScummVM http://www.scummvm.org/] project.
+
+== Cutscenes ==
+
+Appear to be encoded as FLI files, a detailled description of which can be found [http://www.compuphase.com/flic.htm here].
+
+== Sounds / Audio Samples ==
+
+Appear to be raw PCM audio. Not certain about the format of the PCM though (bit rate, channels, etc).

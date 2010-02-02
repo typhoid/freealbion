@@ -6,6 +6,8 @@ Albion was developed back in 1995 when piracy of PC games was on a much smaller 
 
 Because of this, few (if any) of the data files are encrypted. This page documents some of the different file formats used by the game.
 
+*NOTE* All values are decimal unless written in the hexadecimal format e.g. 0xFF
+
 == XLD Archives ==
 
 The XLD file format is an uncompressed container format for the game resources. 
@@ -30,6 +32,8 @@ Each record is 60 bytes long and there are 462 records.
 ||0||20||German text||
 ||20||20||English text||
 ||40||20||French text||
+
+http://freealbion.googlecode.com/svn/wiki/img/item-name-hex.png
 
 == ITEMLIST.DAT ==
 
@@ -114,7 +118,6 @@ Appear to be encoded as FLI files, a detailled description of which can be found
 == Sounds / Audio Samples ==
 
 Appear to be raw PCM audio. Not certain about the format of the PCM though (bit rate, channels, etc).
-
 
 
 === Credits === 

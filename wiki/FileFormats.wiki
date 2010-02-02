@@ -17,7 +17,7 @@ The XLD file format is an uncompressed container format for the game resources.
 ||4||1||unknown||||
 ||6||2||entries||The number of objects stored within the archive.||
 ||9||entries `*` 4||lengths||A list of long integers (4 bytes) which contains the length of the stored object.|||
-||10||DATA||Binary data for the stored files.||
+||10||*||DATA||Binary data for the stored files.||
 
 The rest of the file contains the stored objects, one after another.
 
@@ -39,8 +39,7 @@ http://freealbion.googlecode.com/svn/wiki/img/item-name-hex.png
 
 There are 462 records this file and each record is 40 bytes long. It is believe that, in the absence of any unique identifier in the file, the item ID is determined from its position in the file.
 
-
-||*Offset*||*Length*||*Name*||*Description*||
+|| *Offset* || *Length* || *Name* || *Description* ||
 ||0||1||unknown||||
 ||1||1||typeid||[Items#Types Item type]||
 ||2||1||slotType||||
@@ -78,6 +77,8 @@ There are 462 records this file and each record is 40 bytes long. It is believe 
 ||38||2||class||Appears to be a bitfield that controls which classes can use the item.||
 
 Please be aware that these values are all derived from observation and not guaranteed to be correct.
+
+http://freealbion.googlecode.com/svn/wiki/img/item-list-hex.png
 
 == ITEMGFX ==
 

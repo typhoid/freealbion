@@ -34,43 +34,41 @@ There are 462 records this file and each record is 40 bytes long. It is believe 
 ||*Offset*||*Length*||*Name*||*Description*||
 ||0||1||unknown||||
 ||1||1||typeid||[Items#Types Item type]||
-||2||1||unknown||||
+||2||1||slotType||||
 ||3||1||unknown||||
 ||4||1||gender||Determines which gender can use this item. 2 = female, 3 = any||
-||5||1||unknown||||
+||5||1||hands||Determines how many free hands are required to equip the item.||
 ||6||1||lpMaxBonus||Bonus value to life points.||
 ||7||1||lpMaxBonus||Bonus value to spell points.||
 ||8||1||attributeType||Attribute bonus type.||
 ||9||1||attributeBonus||Attribute bonus value.||
-||11||1||skillType||Skill bonus type.||
-||12||1||skillBonus||Skill bonus value.||
-||13||1||protection||Protection from physical damage.||
-||14||1||damage||Physical damage caused.||
-||15||1||unknown||unknown||
-||16||1||skillTax1Type||Skill Tax 1 Type||
-||17||1||skillTax2Type||Skill Tax 2 Type||
-||18||1||skillTax1||Skill Tax 1 value. [Items#Ranged_Values Ranged Values]||
-||19||1||skillTax2||Skill Tax 2 value. [Items#Ranged_Values Ranged Values]||
+||10||1||skillType||Skill bonus type.||
+||11||1||skillBonus||Skill bonus value.||
+||12||1||protection||Protection from physical damage.||
+||13||1||damage||Physical damage caused.||
+||14||1||ammoType||Ammunition type.||
+||15||1||skillTax1Type||Skill Tax 1 Type||
+||16||1||skillTax2Type||Skill Tax 2 Type||
+||17||1||skillTax1||Skill Tax 1 value. [Items#Ranged_Values Ranged Values]||
+||18||1||skillTax2||Skill Tax 2 value. [Items#Ranged_Values Ranged Values]||
+||19||1||unknown||unknown||
 ||20||1||unknown||unknown||
-||21||1||unknown||unknown||
-||22||1||unknown||unknown||
-||23||1||unknown||unknown||
-||24||1||spell||spell or enchantment on item||
-||25||1||charges||spell or enchantment charges available||
-||26||1||maxcharges||maxiumum spell or enchantment charges||
-||27||1||unknown||unknown||
+||21||1||spellClass||unknown||
+||22||1||spellEffect||unknown||
+||23||1||charges||unknown||
+||24||1||enchantments||spell or enchantment on item||
+||25||1||maxEnchantments||spell or enchantment charges available||
+||26||1||maxCharges||maxiumum spell or enchantment charges||
+||27||1||count||Size of stack||
 ||28||1||unknown||unknown||
 ||29||1||unknown||unknown||
-||30||1||unknown||unknown||
-||31||2||weight||weight of the item in grammes||
-||33||1||unknown||unknown||
-||34||1||unknown||unknown||
-||35||2||icon||Image for the item||
-||37||1||unknown||unknown||
-||38||1||unknown||unknown||
-||39||1||unknown||unknown||
-||40||1||unknown||unknown||
+||30||2||weight||weight of the item in grammes||
+||32||2||value||resell value?||
+||34||2||icon||Image for the item||
+||36||2||race||Appears to be a bitfield that controls which race can use the item.||
+||38||2||class||Appears to be a bitfield that controls which classes can use the item.||
 
+Please be aware that these values are all derived from observation and not guaranteed to be correct.
 
 == ITEMGFX ==
 
@@ -111,3 +109,9 @@ Appear to be encoded as FLI files, a detailled description of which can be found
 == Sounds / Audio Samples ==
 
 Appear to be raw PCM audio. Not certain about the format of the PCM though (bit rate, channels, etc).
+
+
+
+=== Credits === 
+ 
+ * ~~Thanks~~ *Massive thanks* to rAs^ of the [http://albion2.berlios.de/board/ Albion2] message boards for assistance with the item database.

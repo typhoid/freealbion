@@ -7,13 +7,18 @@ Albion was developed back in 1995 when piracy of PC games was on a much smaller 
 Because of this, few (if any) of the data files are encrypted. This page documents some of the different file formats used by the game.
 
 == XLD Archives ==
-||*Offset*||*Length*||*Name*||*Description*||
-||0||4||magic||Magic number. The file signature (XLD0).||
-||5||1||unknown||||
-||7||2||entries||The number of objects stored within the archive.||
-||9||entries `*` 4||lengths||A list of long integers (4 bytes) which store the length of the stored object.|||
 
-The rest of the file contains the stored objects, one after another. There is no compression.
+The XLD file format is an uncompressed container format for the game resources. 
+
+|| *Offset* || *Length* || *Name* || *Description* ||
+||0||4||magic||Magic number. The file signature (XLD0).||
+||4||1||unknown||||
+||6||2||entries||The number of objects stored within the archive.||
+||9||entries `*` 4||lengths||A list of long integers (4 bytes) which contains the length of the stored object.|||
+||10||DATA||Binary data for the stored files.||
+
+The rest of the file contains the stored objects, one after another.
+
 
 == ITEMNAME.DAT ==
 
@@ -21,10 +26,10 @@ This file contains the names of all the items within the game. They are translat
 
 Each record is 60 bytes long and there are 462 records.
 
-||*Offset*||*Length*||*Description*||
+|| *Offset* || *Length* || *Description* ||
 ||0||20||German text||
-||21||20||English text||
-||41||20||French text||
+||20||20||English text||
+||40||20||French text||
 
 == ITEMLIST.DAT ==
 

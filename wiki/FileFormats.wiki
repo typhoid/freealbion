@@ -123,4 +123,5 @@ Appear to be raw PCM audio. Not certain about the format of the PCM though (bit 
 
 === Credits === 
  
- * ~~Thanks~~ *Massive thanks* to rAs^ of the [http://albion2.berlios.de/board/ Albion2] message boards for assistance with the item database.
+ * ~~Thanks~~ *Massive thanks* to rAs^ and Flo of the [http://albion2.berlios.de/board/ Albion2] message boards for assistance with the item database.
+

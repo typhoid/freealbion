@@ -71,10 +71,11 @@ There are 462 records this file and each record is 40 bytes long. It is believe 
 ||28||1||unknown||unknown||
 ||29||1||unknown||unknown||
 ||30||2||weight||weight of the item in grammes||
-||32||2||value||resell value?||
+||32||2||value||Base resell value / 10.||
 ||34||2||icon||Image for the item||
-||36||2||race||Appears to be a bitfield that controls which race can use the item.||
-||38||2||class||Appears to be a bitfield that controls which classes can use the item.||
+||36||2||class||Appears to be a bitfield that controls which classes can use the item.||
+||38||2||race||Appears to be a bitfield that controls which race can use the item.||
+
 
 Please be aware that these values are all derived from observation and not guaranteed to be correct.
 
@@ -124,4 +125,3 @@ Appear to be raw PCM audio. Not certain about the format of the PCM though (bit 
 === Credits === 
  
  * ~~Thanks~~ *Massive thanks* to rAs^ and Flo of the [http://albion2.berlios.de/board/ Albion2] message boards for assistance with the item database.
-

@@ -8,6 +8,46 @@ Because of this, few (if any) of the data files are encrypted. This page documen
 
 *NOTE* All values are decimal unless written in the hexadecimal format e.g. 0xFF
 
+== Files ==
+||*XLD/DAT File*||*Description*||
+||[3DBCKGR 3DBCKGR]||||
+||[3DFLOOR 3DFLOOR]||||
+||[3DOBJEC 3DOBJEC]||||
+||[3DOVERL 3DOVERL]||||
+||[3DWALLS 3DWALLS]||||
+||[AUTOGFX AUTOGFX]||||
+||[BLKLIST BLKLIST]||||
+||[COMBACK COMBACK]||||
+||[COMGFX COMGFX]||||
+||[EVNTSET EVNTSET]||||
+||[FBODPIX FBODPIX]||||
+||[FONTS FONTS]||||
+||[ICONDAT ICONDAT]||||
+||[ICONGFX ICONGFX]||||
+||[ITEMGFX ITEMGFX]||||
+||[ITEMLIST ITEMLIST]||||
+||[ITEMNAME ITEMNAME]||||
+||[LABDATA LABDATA]||||
+||[MAPDATA MAPDATA]||||
+||[MONCHAR MONCHAR]||||
+||[MONGFX MONGFX]||||
+||[MONGRP MONGRP]||||
+||[NPCGR NPCGR]||||
+||[NPCKL NPCKL]||||
+||[PALETTE PALETTE]||||
+||[PARTGR PARTGR]||||
+||[PARTKL PARTKL]||||
+||[PICTURE PICTURE]||||
+||[SAMPLES SAMPLES]||||
+||[SCRIPT SCRIPT]||||
+||[SLAB SLAB]||||
+||[SMLPORT SMLPORT]||||
+||[SONGS SONGS]||||
+||[SPELLDAT SPELLDAT]||||
+||[TACTICO TACTICO]||||
+||[TRANSTB TRANSTB]||||
+||[WAVELIB WAVELIB]||||
+
 == XLD Archives ==
 
 The XLD file format is an uncompressed container format for the game resources. 

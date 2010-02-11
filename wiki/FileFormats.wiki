@@ -55,6 +55,20 @@ Because of this, few (if any) of the data files are encrypted. This page documen
 || ||[TACTICO TACTICO]||combat graphics (tactical board)||
 || ||[TRANSTB TRANSTB]||||
 || ||[WAVELIB WAVELIB]||additional audio samples?||
+||||||||
+|| _Language_ ||||||
+|| ||[EVNTTXT EVNTTXT]||event texts||
+|| ||[FLICS FLICS0]||movies/flcs||
+|| ||[MAPTEXT MAPTEXT]||map texts||
+|| ||[SYSTEXTS SYSTEXTS]||system texts||
+|| ||[WORDLIS WORDLIS]||word list||
+||||||||
+|| _Initial_ ||||||
+|| ||[AUTOMAP AUTOMAP]||automap "uncovered" bitset||
+|| ||[CHESTDT CHESTDT]||chest items||
+|| ||[MERCHDT MERCHDT]||merchant items||
+|| ||[NPCCHAR NPCCHAR]||npc properties||
+|| ||[PRTCHAR PRTCHAR]||party properties||
 
 == XLD Archives ==
 

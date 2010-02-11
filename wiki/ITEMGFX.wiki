@@ -1,0 +1,4 @@
+
+Each item has an icon associated with it. Each image is 32x32 pixels in size with one byte per pixel. The images are indexed against a 256 color palette.
+
+As yet I have not determined which palette.

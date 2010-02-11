@@ -9,6 +9,7 @@ Because of this, few (if any) of the data files are encrypted. This page documen
 *NOTE* All values are decimal unless written in the hexadecimal format e.g. 0xFF
 
 == Files ==
+
 || *affiliation* || *XLD/DAT File* || *Description* ||
 || _3D-Map_ ||||||
 || ||[3DBCKGR 3DBCKGR]||3D backgrounds||

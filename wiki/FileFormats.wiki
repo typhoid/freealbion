@@ -9,44 +9,53 @@ Because of this, few (if any) of the data files are encrypted. This page documen
 *NOTE* All values are decimal unless written in the hexadecimal format e.g. 0xFF
 
 == Files ==
-||*XLD/DAT File*||*Description*||
-||[3DBCKGR 3DBCKGR]||||
-||[3DFLOOR 3DFLOOR]||||
-||[3DOBJEC 3DOBJEC]||||
-||[3DOVERL 3DOVERL]||||
-||[3DWALLS 3DWALLS]||||
-||[AUTOGFX AUTOGFX]||||
+|| *XLD/DAT File* || *Description* ||
+
+_3D-Map_
+||[3DBCKGR 3DBCKGR]||3D backgrounds||
+||[3DFLOOR 3DFLOOR]||floor/ceiling textures|||
+||[3DOBJEC 3DOBJEC]||object textures||
+||[3DOVERL 3DOVERL]||overlay textures||
+||[3DWALLS 3DWALLS]||wall textures||
+||[LABDATA LABDATA]||misc 3D map settings, texture -> tile# mapping||
+||[AUTOGFX AUTOGFX]||automap/overview map graphics||
+||[MAPDATA MAPDATA]||actual 2D and 3D map data||
+
+_2D-Map_
+||[ICONGFX ICONGFX]||tilesets||
+||[ICONDAT ICONDAT]||tileset tiles -> tile# mapping||
+||[MAPDATA MAPDATA]||actual 2D and 3D map data||
+
+_Item_
+||[ITEMGFX ITEMGFX]||item graphics||
+||[ITEMLIST ITEMLIST]||item properties||
+||[ITEMNAME ITEMNAME]||item names||
+
+_Misc_
 ||[BLKLIST BLKLIST]||||
-||[COMBACK COMBACK]||||
-||[COMGFX COMGFX]||||
-||[EVNTSET EVNTSET]||||
+||[COMBACK COMBACK]||combat backgrounds||
+||[COMGFX COMGFX]||combat graphics||
+||[EVNTSET EVNTSET]||event sets||
 ||[FBODPIX FBODPIX]||||
-||[FONTS FONTS]||||
-||[ICONDAT ICONDAT]||||
-||[ICONGFX ICONGFX]||||
-||[ITEMGFX ITEMGFX]||||
-||[ITEMLIST ITEMLIST]||||
-||[ITEMNAME ITEMNAME]||||
-||[LABDATA LABDATA]||||
-||[MAPDATA MAPDATA]||||
-||[MONCHAR MONCHAR]||||
-||[MONGFX MONGFX]||||
-||[MONGRP MONGRP]||||
-||[NPCGR NPCGR]||||
-||[NPCKL NPCKL]||||
-||[PALETTE PALETTE]||||
-||[PARTGR PARTGR]||||
-||[PARTKL PARTKL]||||
-||[PICTURE PICTURE]||||
-||[SAMPLES SAMPLES]||||
-||[SCRIPT SCRIPT]||||
-||[SLAB SLAB]||||
-||[SMLPORT SMLPORT]||||
-||[SONGS SONGS]||||
-||[SPELLDAT SPELLDAT]||||
-||[TACTICO TACTICO]||||
+||[FONTS FONTS]||fonts||
+||[MONCHAR MONCHAR]||monster properties||
+||[MONGFX MONGFX]||combat monster 3D graphics||
+||[MONGRP MONGRP]||monster group layouts||
+||[NPCGR NPCGR]||npc 2D graphics (interior/big)||
+||[NPCKL NPCKL]||npc 2D graphics (exterior/small)||
+||[PALETTE PALETTE]||palettes||
+||[PARTGR PARTGR]||party 2D graphics (interior/big)||
+||[PARTKL PARTKL]||party 2D graphics (exterior/small)||
+||[PICTURE PICTURE]||"cut-scene" pictures||
+||[SAMPLES SAMPLES]||audio samples||
+||[SCRIPT SCRIPT]||scripts||
+||[SLAB SLAB]||background image (setup?)||
+||[SMLPORT SMLPORT]||npc/party avatars||
+||[SONGS SONGS]||songs||
+||[SPELLDAT SPELLDAT]||spell properties||
+||[TACTICO TACTICO]||combat graphics (tactical board)||
 ||[TRANSTB TRANSTB]||||
-||[WAVELIB WAVELIB]||||
+||[WAVELIB WAVELIB]||additional audio samples?||
 
 == XLD Archives ==
 

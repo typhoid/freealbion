@@ -31,6 +31,20 @@ There are 462 items in the game.
 ||21||Lockpick||
 ||22||Staff||
 
+== Slots ==
+
+||Id||Description||
+||0||Inventory||
+||1||Neck||
+||2||Head||
+||4||Left hand||
+||5||Chest||
+||6||Right hand||
+||7||Left finger||
+||8||Feet||
+||9||Right finger||
+||10||Left hand or tail||
+
 == Ranged Values ==
 
 Some of the values for items are negative but stored within a single byte. This is achieved by using two ranges of numbers to indicate if the value is positive or negative.

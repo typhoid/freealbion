@@ -45,6 +45,14 @@ There are 462 items in the game.
 ||9||Right finger||
 ||10||Left hand or tail||
 
+== Spell Class ==
+
+||Id||Name||
+||0||Iskai||
+||1||Enlightened Ones||
+||2||Druids||
+||3||Kenget Kamulos||
+
 == Ranged Values ==
 
 Some of the values for items are negative but stored within a single byte. This is achieved by using two ranges of numbers to indicate if the value is positive or negative.

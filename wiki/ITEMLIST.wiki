@@ -22,7 +22,7 @@ There are 462 records this file and each record is 40 bytes long. It is believe 
 ||18||1||skillTax2||Skill Tax 2 value. [Items#Ranged_Values Ranged Values]||
 ||19||1||unknown||unknown||
 ||20||1||unknown||unknown||
-||21||1||spellClass||unknown||
+||21||1||spellClass||[Items#Spell_Class Spell Class]||
 ||22||1||spellEffect||unknown||
 ||23||1||charges||unknown||
 ||24||1||enchantments||spell or enchantment on item||

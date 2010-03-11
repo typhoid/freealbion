@@ -9,9 +9,9 @@ There are 462 records this file and each record is 40 bytes long. It is believe 
 ||5||1||hands||Determines how many free hands are required to equip the item.||
 ||6||1||lpMaxBonus||Bonus value to life points.||
 ||7||1||lpMaxBonus||Bonus value to spell points.||
-||8||1||attributeType||Attribute bonus type.||
+||8||1||attributeType||[Items#Attributes Attribute bonus type]||
 ||9||1||attributeBonus||Attribute bonus value.||
-||10||1||skillType||Skill bonus type.||
+||10||1||skillType||[Items#Skills Skill bonus type]||
 ||11||1||skillBonus||Skill bonus value.||
 ||12||1||protection||Protection from physical damage.||
 ||13||1||damage||Physical damage caused.||

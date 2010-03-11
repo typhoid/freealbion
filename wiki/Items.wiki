@@ -45,13 +45,33 @@ There are 462 items in the game.
 ||9||Right finger||
 ||10||Left hand or tail||
 
+== Attributes ==
+
+||Id||Name||
+||0||Strength||
+||1||Intelligence||
+||2||Dexterity||
+||3||Speed||
+||4||Stamina||
+||5||Luck||
+||6||Magic resistance||
+||7||Magic talent||
+
+== Skills ==
+
+||Id||Name||
+||0||Close range combat||
+||1||Long range combat||
+||2||Critical hit||
+||3||Lockpicking||
+
 == Spell Class ==
 
 ||Id||Name||
-||0||Iskai||
-||1||Enlightened Ones||
+||0||Dji-Kas mage||
+||1||Enlightened One||
 ||2||Druids||
-||3||Kenget Kamulos||
+||3||Oqulo Kamulos||
 
 == Ranged Values ==
 

@@ -1,0 +1,9 @@
+Note: this is the same for EVNTTXT and MAPTEXT.
+
+Header:
+|| *Offset* || *Length* || *Description* ||
+||0||2 (Word)||# of texts = text_count||
+||2||2 (Word) `*` text_count||length of each text||
+
+Content, for each text string:
+||-||text length+1||text itself, ended by 0x00||

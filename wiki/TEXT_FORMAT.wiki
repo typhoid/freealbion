@@ -21,3 +21,4 @@ special tokens:
 ||{BIG }|| ||big text, larger font size||
 ||{HIS }|| ||"his"/"her" text token, obviously dependent on the party leaders gender||
 ||{INK ###}||### = number, starting at 001||ink --tbd: 001/002/006 = white/gold/??? text color||
+--TODO: more tokens

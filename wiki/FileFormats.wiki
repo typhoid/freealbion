@@ -58,9 +58,9 @@ Because of this, few (if any) of the data files are encrypted. This page documen
 || ||[WAVELIB WAVELIB]||additional audio samples?||
 ||||||||
 || _Language_ ||||||
-|| ||[EVNTTXT EVNTTXT]||event texts||
+|| ||[TEXT_FORMAT EVNTTXT]||event texts||
 || ||[FLICS FLICS0]||movies/flcs||
-|| ||[MAPTEXT MAPTEXT]||map texts||
+|| ||[TEXT_FORMAT MAPTEXT]||map texts||
 || ||[SYSTEXTS SYSTEXTS]||system texts||
 || ||[WORDLIS WORDLIS]||word list||
 ||||||||

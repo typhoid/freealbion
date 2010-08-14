@@ -21,17 +21,57 @@ Foundation, Inc., 51 Franklin Street, Fifth Floor, Boston, MA  02110-1301, USA.
 #include <assert.h>
 #include "../../shared/types.h"
 #include "../../shared/xld.h"
+#include "../../shared/palette.h"
 
-#define ALBION_PALETTE_COUNT		56
+extern uint32_t palettes[1][1];
 
- static uint32_t	palettes[ALBION_PALETTE_COUNT][256];
- 
- int main(int argc, const char *argv[]) {
- 		
+void dumptohtml(uint32_t palette[], int colours)
+{
+	FILE *fp = fopen("c:\\tmp\\palette.html", "wb");
+	int n;
+	uint32_t col;
+
+	fprintf(fp, "<html><body><table>");
+	
+	fprintf(fp, "<tr>");
+	for (n=0;n<colours;n++) {
+		if (n % 16 == 0)
+			fprintf(fp, "</tr><tr>");
+		col = palette[n];
+		fprintf(fp, "<td style=\"background-color: #%02x%02x%02x;\">&nbsp;&nbsp;&nbsp;</td>",
+			(unsigned char)(col >> 16),
+			(unsigned char)(col >> 8),
+			(unsigned char)col);
+	}
+
+	fprintf(fp, "</table></body></html>");
+	fflush(fp);
+	fclose(fp);
+}
+
+int main(int argc, const char *argv[]) {
+ 	
+	int n = 0;
+
+	InitPalettes();
+	
+	// list all the colors in the first palette
+	for (n=0;n<256;n++) {
+		printf("#%08x ", palettes[0][n]);
+	}
+
+	dumptohtml(palettes[0], 256);
+
+	/*
  	uchar_t		shared[192];	// 3 x 64   = 192
  	uchar_t		custom[576];	// 3 x 192  = 576
  								// 192 + 64 = 256
- 		
+ 	
+	uint32_t custom_xrgb[192];
+	uint32_t shared_xrgb[64];
+	
+	unsigned int colour = 0;
+	int r, g, b;
  	
  	XldArchive	*xld;
  	XldEntry	e;
@@ -52,6 +92,29 @@ Foundation, Inc., 51 Franklin Street, Fifth Floor, Boston, MA  02110-1301, USA.
  		fprintf(stderr, "error: unable to open shared palette.\n");
  		return EXIT_FAILURE;	
  	}
+
+	for (n=0,x=0;n<192;n+=3,x++) {
+		
+		r = shared[n];
+		g = shared[n+1];
+		b = shared[n+2];
+
+		colour = 0xff000000;
+		colour += r << 16;
+		colour += g << 8;
+		colour += b;
+		
+		printf("%08x ", colour);
+		shared_xrgb[x] = colour;
+
+
+	}
+	*/
+
+	
+	
+
+	/*
 
  	xld = XldOpen("PALETTE0.XLD");
  	
@@ -97,5 +160,6 @@ Foundation, Inc., 51 Franklin Street, Fifth Floor, Boston, MA  02110-1301, USA.
  		fprintf(stderr, "error: unable to open archive.\n");
  		return EXIT_FAILURE;
  	}
+	*/
  	
  }

@@ -19,9 +19,9 @@ Foundation, Inc., 51 Franklin Street, Fifth Floor, Boston, MA  02110-1301, USA.
 #include <stdio.h>
 #include <stdlib.h>
 #include <string.h>
-#include "../../shared/types.h"
-#include "../../shared/utils.h"
-#include "../../shared/systexts.h"
+#include "types.h"
+#include "utils.h"
+#include "systexts.h"
 
 /*
  * Stores a list of all systexts.
@@ -47,15 +47,23 @@ static void append_systext(systext *text) {
 	}
 }
 
+/*
+ *
+ */
 int InitSysTexts() {
 
-	FILE *fp = fopen("SYSTEXTS", "rb");
+	FILE *fp;
+	uchar_t		filename[128];
 	uchar_t		buffer[ALBION_MAX_SYSTEXT];
 	char *start;
 	char *sep, *end;
 	uchar_t		idbuffer[6];
 
 	systext *t;
+
+	sprintf(filename, "%s\\%s", "ENGLISH", "SYSTEXTS");
+
+	fp = fopen(filename, "rb");
 
 	if (!fp)
 		return EXIT_FAILURE;
@@ -105,6 +113,9 @@ int InitSysTexts() {
 
 }
 
+/*
+ * Release systext resources.
+ */
 void FreeSysTexts() {
 
 	systext *t = texts;

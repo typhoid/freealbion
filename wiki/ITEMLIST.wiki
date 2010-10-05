@@ -29,7 +29,7 @@ There are 462 records this file and each record is 40 bytes long. It is believe 
 ||25||1||maxEnchantments||Maximum possible enchantments||
 ||26||1||maxCharges||Maxiumum number of charges||
 ||27||1||count||Switch for vital, stackable and single-use items||
-||28||1||unknown||unknown||
+||28||1||count2||Switch for extra info, broken and cursed items||
 ||29||1||iconAnim||Number of animated images||
 ||30||2||weight||weight of the item in grammes||
 ||32||2||value||Base resell value / 10.||

@@ -1,7 +1,7 @@
 There are 462 records this file and each record is 40 bytes long. It is believe that, in the absence of any unique identifier in the file, the item ID is determined from its position in the file.
 
 || *Offset* || *Length* || *Name* || *Description* ||
-||0||1||unknown||||
+||0||1||unknown||Always 0||
 ||1||1||typeid||[Items#Types Item type]||
 ||2||1||slotType||[Items#Slots Slot that can hold the item]||
 ||3||1||unknown||||
@@ -20,17 +20,17 @@ There are 462 records this file and each record is 40 bytes long. It is believe 
 ||16||1||skillTax2Type||Skill Tax 2 Type||
 ||17||1||skillTax1||Skill Tax 1 value. [Items#Ranged_Values Ranged Values]||
 ||18||1||skillTax2||Skill Tax 2 value. [Items#Ranged_Values Ranged Values]||
-||19||1||unknown||unknown||
-||20||1||unknown||unknown||
+||19||1||activate||Activate enables compass (0), monster eye (1) or clock (3)||
+||20||1||ammoAnim||Ammo combat animation (long-range weapons only)||
 ||21||1||spellClass||[Items#Spell_Class Spell Class]||
-||22||1||spellEffect||unknown||
-||23||1||charges||unknown||
-||24||1||enchantments||spell or enchantment on item||
-||25||1||maxEnchantments||spell or enchantment charges available||
-||26||1||maxCharges||maxiumum spell or enchantment charges||
-||27||1||count||Size of stack||
+||22||1||spellEffect||Spell id||
+||23||1||charges||Charges left in item||
+||24||1||enchantments||Number of times item was enchanted/recharged||
+||25||1||maxEnchantments||Maximum possible enchantments||
+||26||1||maxCharges||Maxiumum number of charges||
+||27||1||count||Switch for vital, stackable and single-use items||
 ||28||1||unknown||unknown||
-||29||1||unknown||unknown||
+||29||1||iconAnim||Number of animated images||
 ||30||2||weight||weight of the item in grammes||
 ||32||2||value||Base resell value / 10.||
 ||34||2||icon||Image for the item||

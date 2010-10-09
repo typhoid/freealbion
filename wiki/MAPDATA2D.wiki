@@ -23,7 +23,7 @@
 ||12 bit||12 bit|| underlay || underlay id ||
 
 == map events ==
-see [mapevents mapevents]
+ * see [mapevents mapevents]
 
 == NPC/monster position structure ==
  * see [MAPDATA3D#NPC/monster_position_structure]

@@ -18,16 +18,19 @@
  * 10 bytes per event
  * overall: npc/monster count `*` 10 bytes
 || *Offset* || *Length* || *Name* || *Description* ||
-1 = npc nummer/zuordnung (wenn 0, dann kein npc sondern dummy objekt)
-2 = ?
-3+4 = evtl. event?
-5 = objekt nummer (-> labdata)
-6-7 = ?
+||0||1|| npc id|| npc id/mapping (if 0: dummy event/object) ||
+||1||1|| unknown || unknown ||
+||2||2|| unknown || possibly an event id? ||
+||4||1|| object id || object id (-> labdata) ||
+||5||2|| unknown || unknown ||
+||7||1|| movement type || movement type: ||
+||8||2|| unknown || unknown ||
+
 8 = bewegungs art: (wenn bit 1 und/oder 2 gesetzt, dann random?, )
 	bit 1: wenn bit 1 und/oder 2 gesetzt, dann random?, ansonsten gibt es eine 0x900 Bytes ...
 	bit 2: ... gro§e struktur hinter den event daten anstelle der start-pos (bewegungsinformationen?)
 	bit 3: unbekannt? manchmal gesetzt, wenn bit1+2 nicht gesetzt sind
-9-10 = ?
+
 
 = actual map data =
  * 3 bytes per tile

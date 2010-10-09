@@ -1,0 +1,106 @@
+== event header ==
+ * first word: #"positionless"/automatically executed events (== auto events)
+ * for #auto events:
+|| *Offset* || *Length* || *Name* || *Description* ||
+||0||2|| "x pos" || always 0x0000? ||
+||2||2|| event trigger || event trigger ||
+||4||2|| block number || block number ||
+
+ * for map y dim/each row:
+   * first word: #events in this row
+   * for #row events
+|| *Offset* || *Length* || *Name* || *Description* ||
+||0||2|| x pos || actually one byte ||
+||2||2|| event trigger || event trigger ||
+||4||2|| block number || block number ||
+
+== events ==
+ * first word: #events
+ * 12 bytes per event
+ * for #events:
+|| *Offset* || *Length* || *Name* ||
+||0||1|| event type ||
+||1||1|| byte 1 ||
+||2||1|| byte 2 ||
+||3||1|| byte 3 ||
+||4||1|| byte 4 ||
+||5||1|| byte 5 ||
+||6||2|| word 6 ||
+||8||2|| word 8 ||
+||10||2|| next event ||
+
+
+=== event trigger ===
+{{{
+byte 1:
+bit 1: Normal
+bit 2: Examine
+bit 3: Touch
+bit 4: Speak
+bit 5: Use item
+bit 6: Map init
+bit 7: Every step
+bit 8: Every hour
+
+byte 2:
+bit 1: Every day
+bit 2: Default
+bit 3: Action
+bit 4: NPC
+bit 5: Take
+bit 6: -
+bit 7: -
+bit 8: -
+}}}
+
+=== event type ===
+{{{
+00: Script
+01: Map exit
+02: Door
+03: Chest
+04: Text
+05: Spinner
+06: Trap
+07: Change used item
+08: Datachange
+09: Change icon
+0A: Encounter
+0B: Place action
+0C: Query
+0D: Modify
+0E: Action
+0F: Signal
+10: Clone automap
+11: Sound
+12: Start dialogue
+13: Create transport
+14: Execute
+15: Remove party member
+16: End dialogue
+17: Wipe
+18: Play animation
+19: Offset
+1A: Pause
+1B: Simple chest
+1C: Ask surrender
+1D: Do script
+}}}
+
+== specific event type descriptions ==
+=== Map exit ===
+{{{
+byte 4: immer 255?
+word 6: Map-Nummer
+}}}
+
+=== Query ===
+{{{
+word 8: nächstes Event/Block ("Event Verzweigung")
+}}}
+
+=== Text ===
+{{{
+byte 1: Text-Typ (0 = Fenster, 6 = "Quickinfo")
+byte 5: Text-Nummer
+}}}

@@ -32,6 +32,7 @@ Because of this, few (if any) of the data files are encrypted. This page documen
 || ||[ITEMNAME ITEMNAME]||item names||
 ||||||||
 || _Misc_ ||||||
+|| ||[SAVEGAME SAVEGAME]||savegame||
 || ||[BLKLIST BLKLIST]||||
 || ||[COMBACK COMBACK]||combat backgrounds||
 || ||[COMGFX COMGFX]||combat graphics||

@@ -1,0 +1,3 @@
+[MAPDATA2D 2D map data]
+
+[MAPDATA2D 3D map data]

@@ -6,13 +6,15 @@
 == character data ==
 
 === character attributes and misc values ===
-{{{[level]
+{{{
+[level]
 [face?]
 [15 bytes ?]
 [TP 2 bytes]
 [gold ((2 bytes)/10)]
 [rations]
-[10 bytes ?]}}}
+[10 bytes ?]
+}}}
 
 *TODO*: attributes
 
@@ -21,7 +23,7 @@
 
 *TODO*: format
 
-=== character invenotry ===
+=== character inventory ===
 (24*6 bytes = 144 bytes)
 
 *TODO*: format

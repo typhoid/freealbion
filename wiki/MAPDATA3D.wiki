@@ -32,7 +32,7 @@
 ||1||1|| floor id || floor id ||
 ||2||1|| ceiling id || ceiling id||
 
-== map events
+== map events ==
 see [mapevents mapevents]
 
 == NPC/monster position structure ==

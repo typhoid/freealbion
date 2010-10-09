@@ -1,1 +1,66 @@
-*stub*
+*TODO*: complete, translate to english
+
+=Header=
+ * 10 bytes
+|| *Offset* || *Length* || *Name* || *Description* ||
+||0||1|| ceiling || 0x01 - 0x03 = no ceiling / 0x04 - 0x05 (0xFF?) = ceiling ||
+||1||1|| NPC/monster count || amount of NPCs and monsters (+spare) ||
+||2||1|| map type || 0x01 = 3D map, 0x02 = 2D map ||
+||3||1|| unknown || unknown ||
+||4||1|| x dim || map x dimension ||
+||5||1|| y dim || map y dimension ||
+||6||1|| labdata || labdata id ||
+||7||1|| music || background music id ||
+||8||1|| palette || map palette (0x01 - 0x38) ||
+||9||1|| unknown || unknown ||
+
+= NPC/monster events =
+ * 10 bytes per event
+ * overall: npc/monster count `*` 10 bytes
+|| *Offset* || *Length* || *Name* || *Description* ||
+1 = npc nummer/zuordnung (wenn 0, dann kein npc sondern dummy objekt)
+2 = ?
+3+4 = evtl. event?
+5 = objekt nummer (-> labdata)
+6-7 = ?
+8 = bewegungs art: (wenn bit 1 und/oder 2 gesetzt, dann random?, )
+	bit 1: wenn bit 1 und/oder 2 gesetzt, dann random?, ansonsten gibt es eine 0x900 Bytes ...
+	bit 2: ... gro§e struktur hinter den event daten anstelle der start-pos (bewegungsinformationen?)
+	bit 3: unbekannt? manchmal gesetzt, wenn bit1+2 nicht gesetzt sind
+9-10 = ?
+
+= actual map data =
+ * 3 bytes per tile
+ * overall: x dim `*` y dim `*` 3 bytes
+|| *Offset* || *Length* || *Name* || *Description* ||
+||0||1|| object id || object id (object: 1 - 101; wall: 102+) ||
+||1||1|| floor id || floor id ||
+||2||1|| ceiling id || ceiling id||
+
+*TODO*: [events event_header_spec]
+
+=NPC-Pos structure=
+ * x = amount of npcs/monsters]
+[FOR x]
+	[IF movement type & 0x3 != 0]
+		[X-Pos - Byte]
+		[Y-Pos - Byte]
+	[ELSE]
+		[FOR 0x480; 48 positions per hour or one position each 1.25 minutes]
+			[X-Pos - Byte]
+			[Y-Pos - Byte]
+[END FOR]
+
+=Automap Info / GoTo-Points=
+[Anzahl der EintrŠge = x - word]
+[FOR x (Struktur jeweils 19 Bytes)]
+	[X-Pos - Byte]
+	[Y-Pos - Byte]
+	[??? - Byte]
+	[??? - Byte]
+	[Name/Text - 15 Bytes]
+[END FOR]
+
+=Automap GFX Remapping Struktur?=
+ * 0x40 Bytes
+[??? Struktur - 0x80 Bytes]

@@ -1,4 +1,4 @@
-== Header ==
+== header ==
  * 10 bytes
 || *Offset* || *Length* || *Name* || *Description* ||
 ||0||1|| ceiling || 0x01 - 0x03 = no ceiling / 0x04 - 0x05 (0xFF?) = ceiling ||
@@ -15,6 +15,8 @@
 == NPC/monster events ==
  * 10 bytes per event
  * overall: #npc/monster `*` 10 bytes
+ * if #npc/monster (header byte 1) == 0x00: 32 `*` 10 bytes
+ * if #npc/monster (header byte 1) == 0x40: 96 `*` 10 bytes
 || *Offset* || *Length* || *Name* || *Description* ||
 ||0||1|| npc id|| npc id/mapping (if 0: dummy event/object) ||
 ||1||1|| unknown || unknown ||

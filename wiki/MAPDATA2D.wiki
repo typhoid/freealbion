@@ -1,1 +1,29 @@
-*stub*
+== header ==
+ * 10 bytes
+|| *Offset* || *Length* || *Name* || *Description* ||
+||0||1|| unknown || 0x01 - 0x03 = no ceiling / 0x04 - 0x05 (0xFF?) = ceiling ||
+||1||1|| NPC/monster count || amount of NPCs and monsters (+spare) ||
+||2||1|| map type || 0x01 = 3D map, 0x02 = 2D map ||
+||3||1|| unknown || unknown ||
+||4||1|| x dim || map x dimension ||
+||5||1|| y dim || map y dimension ||
+||6||1|| tileset || tileset id ||
+||7||1|| music || background music id ||
+||8||1|| unknown || unconfirmed: map palette? ||
+||9||1|| unknown || unknown ||
+
+== NPC/monster events ==
+ * see [MAPDATA3D#NPC/monster_events]
+
+== map data ==
+ * 3 bytes per tile
+ * overall: x dim `*` y dim `*` 3 bytes
+|| *Offset* || *Length* || *Name* || *Description* ||
+||0||12 bit|| overlay || overlay id ||
+||12 bit||12 bit|| underlay || underlay id ||
+
+== map events ==
+see [mapevents mapevents]
+
+== NPC/monster position structure ==
+ * see [MAPDATA3D#NPC/monster_position_structure]

@@ -1,7 +1,7 @@
 == header ==
  * 10 bytes
 || *Offset* || *Length* || *Name* || *Description* ||
-||0||1|| unknown || 0x01 - 0x03 = no ceiling / 0x04 - 0x05 (0xFF?) = ceiling ||
+||0||1|| unknown || unknown ||
 ||1||1|| NPC/monster count || amount of NPCs and monsters (+spare) ||
 ||2||1|| map type || 0x01 = 3D map, 0x02 = 2D map ||
 ||3||1|| unknown || unknown ||

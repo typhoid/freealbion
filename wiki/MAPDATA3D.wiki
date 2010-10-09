@@ -35,6 +35,7 @@
 *TODO*: [events event_header_spec]
 
 == NPC/monster position structure ==
+ * note: these correspond directly with "NPC/monster events" (first event entry ^= first position structure entry)
  * overall: #npc/monster sub-structures
  * if corresponding movement type & 0x3 != 0 (2 bytes)
 {{{

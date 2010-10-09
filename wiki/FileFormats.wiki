@@ -24,7 +24,7 @@ Because of this, few (if any) of the data files are encrypted. This page documen
 || _2D-Map_ ||||||
 || ||[ICONGFX ICONGFX]||tilesets||
 || ||[ICONDAT ICONDAT]||tileset tiles -> tile# mapping||
-|| ||[MAPDATA MAPDATA]||actual 2D and 3D map data||
+|| ||[MAPDATA MAPDATA]||actual [MAPDATA2D 2D] and [MAPDATA3D 3D] map data||
 ||||||||
 || _Item_ ||||||
 || ||[ITEMGFX ITEMGFX]||item graphics||

@@ -35,7 +35,7 @@
 ||2||1|| ceiling id || ceiling id||
 
 == map events ==
-see [mapevents mapevents]
+ * see [mapevents mapevents]
 
 == NPC/monster position structure ==
  * note: these correspond directly with "NPC/monster events" (first event entry ^= first position structure entry)

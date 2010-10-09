@@ -1,6 +1,7 @@
-*TODO*: complete, translate to english
 
-=Header=
+*TODO*: complete
+
+== Header ==
  * 10 bytes
 || *Offset* || *Length* || *Name* || *Description* ||
 ||0||1|| ceiling || 0x01 - 0x03 = no ceiling / 0x04 - 0x05 (0xFF?) = ceiling ||
@@ -14,7 +15,7 @@
 ||8||1|| palette || map palette (0x01 - 0x38) ||
 ||9||1|| unknown || unknown ||
 
-= NPC/monster events =
+== NPC/monster events ==
  * 10 bytes per event
  * overall: npc/monster count `*` 10 bytes
 || *Offset* || *Length* || *Name* || *Description* ||
@@ -23,47 +24,44 @@
 ||2||2|| unknown || possibly an event id? ||
 ||4||1|| object id || object id (-> labdata) ||
 ||5||2|| unknown || unknown ||
-||7||1|| movement type || movement type: ||
+||7||1|| movement type || movement type:<br> `*` bit 1/2: if bit 1 and/or 2 are set: random; if neither is set: use a 0x900 byte structure containing positioning data<br> `*` bit 3: unknown? sometimes set if bit 1 and 2 aren't set||
 ||8||2|| unknown || unknown ||
 
-8 = bewegungs art: (wenn bit 1 und/oder 2 gesetzt, dann random?, )
-	bit 1: wenn bit 1 und/oder 2 gesetzt, dann random?, ansonsten gibt es eine 0x900 Bytes ...
-	bit 2: ... gro§e struktur hinter den event daten anstelle der start-pos (bewegungsinformationen?)
-	bit 3: unbekannt? manchmal gesetzt, wenn bit1+2 nicht gesetzt sind
-
-
-= actual map data =
+== actual map data ==
  * 3 bytes per tile
  * overall: x dim `*` y dim `*` 3 bytes
 || *Offset* || *Length* || *Name* || *Description* ||
-||0||1|| object id || object id (object: 1 - 101; wall: 102+) ||
+||0||1|| object/wall id || object/wall id (object if: 1 - 101; wall if: 102+) ||
 ||1||1|| floor id || floor id ||
 ||2||1|| ceiling id || ceiling id||
 
 *TODO*: [events event_header_spec]
 
-=NPC-Pos structure=
- * x = amount of npcs/monsters]
-[FOR x]
-	[IF movement type & 0x3 != 0]
-		[X-Pos - Byte]
-		[Y-Pos - Byte]
-	[ELSE]
-		[FOR 0x480; 48 positions per hour or one position each 1.25 minutes]
-			[X-Pos - Byte]
-			[Y-Pos - Byte]
-[END FOR]
-
-=Automap Info / GoTo-Points=
-[Anzahl der EintrŠge = x - word]
-[FOR x (Struktur jeweils 19 Bytes)]
+== NPC/monster position structure ==
+ * overall: #npc/monster sub-structures
+ * if corresponding movement type & 0x3 != 0 (2 bytes)
+{{{
+[X-Pos - Byte]
+[Y-Pos - Byte]
+}}}
+ * else (0x900 bytes)
+{{{
+[FOR 0x480; 48 positions per hour or one position each 1.25 minutes]
 	[X-Pos - Byte]
 	[Y-Pos - Byte]
-	[??? - Byte]
-	[??? - Byte]
-	[Name/Text - 15 Bytes]
-[END FOR]
+}}}
 
-=Automap GFX Remapping Struktur?=
+== automap info / goto points ==
+ * first word: amount of goto points
+ * 19 bytes per goto point
+ * overall: #goto points `*` 19 bytes
+|| *Offset* || *Length* || *Description* ||
+||0||1|| x pos ||
+||1||1|| y pos ||
+||2||1|| unknown ||
+||3||1|| unknown ||
+||4||15|| name/text ||
+
+== automap gfx remapping structure ==
  * 0x40 Bytes
-[??? Struktur - 0x80 Bytes]
+ * unknown structure: 0x80 bytes

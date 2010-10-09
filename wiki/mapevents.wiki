@@ -90,17 +90,17 @@ bit 8: -
 == specific event type descriptions ==
 === Map exit ===
 {{{
-byte 4: immer 255?
-word 6: Map-Nummer
+byte 4: always 255?
+word 6: map id/number
 }}}
 
 === Query ===
 {{{
-word 8: nächstes Event/Block ("Event Verzweigung")
+word 8: next event/block ("event branching")
 }}}
 
 === Text ===
 {{{
-byte 1: Text-Typ (0 = Fenster, 6 = "Quickinfo")
-byte 5: Text-Nummer
+byte 1: text type (0 = window, 6 = quickinfo)
+byte 5: text id/number
 }}}

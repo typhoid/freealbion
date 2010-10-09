@@ -32,7 +32,8 @@
 ||1||1|| floor id || floor id ||
 ||2||1|| ceiling id || ceiling id||
 
-*TODO*: [events event_header_spec]
+== map events
+see [mapevents mapevents]
 
 == NPC/monster position structure ==
  * note: these correspond directly with "NPC/monster events" (first event entry ^= first position structure entry)

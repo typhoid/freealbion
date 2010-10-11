@@ -9,7 +9,7 @@
 ||5||1|| y dim || map y dimension ||
 ||6||1|| tileset || tileset id ||
 ||7||1|| music || background music id ||
-||8||1|| unknown || unconfirmed: map palette? ||
+||8||1|| unknown || unconfirmed: npc/party palette? ||
 ||9||1|| unknown || unknown ||
 
 == NPC/monster events ==

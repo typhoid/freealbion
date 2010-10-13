@@ -33,11 +33,11 @@ Because of this, few (if any) of the data files are encrypted. This page documen
 ||||||||
 || _Misc_ ||||||
 || ||[SAVEGAME SAVEGAME]||savegame||
-|| ||[BLKLIST BLKLIST]||||
+|| ||[BLKLIST BLKLIST]||block list||
 || ||[COMBACK COMBACK]||combat backgrounds||
 || ||[COMGFX COMGFX]||combat graphics||
 || ||[EVNTSET EVNTSET]||event sets||
-|| ||[FBODPIX FBODPIX]||||
+|| ||[FBODPIX FBODPIX]||full body pictures (char screen)||
 || ||[FONTS FONTS]||fonts||
 || ||[MONCHAR MONCHAR]||monster properties||
 || ||[MONGFX MONGFX]||combat monster 3D graphics||
@@ -55,7 +55,7 @@ Because of this, few (if any) of the data files are encrypted. This page documen
 || ||[SONGS SONGS]||songs||
 || ||[SPELLDAT SPELLDAT]||spell properties||
 || ||[TACTICO TACTICO]||combat graphics (tactical board)||
-|| ||[TRANSTB TRANSTB]||||
+|| ||[TRANSTB TRANSTB]||transparency tables||
 || ||[WAVELIB WAVELIB]||additional audio samples?||
 ||||||||
 || _Language_ ||||||

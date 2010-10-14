@@ -56,7 +56,7 @@ Because of this, few (if any) of the data files are encrypted. This page documen
 || ||[SPELLDAT SPELLDAT]||spell properties||
 || ||[TACTICO TACTICO]||combat graphics (tactical board)||
 || ||[TRANSTB TRANSTB]||transparency tables||
-|| ||[WAVELIB WAVELIB]||additional audio samples?||
+|| ||[WAVELIB WAVELIB]||additional audio samples||
 ||||||||
 || _Language_ ||||||
 || ||[TEXT_FORMAT EVNTTXT]||event texts||

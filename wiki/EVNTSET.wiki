@@ -1,3 +1,6 @@
+These are mostly used for NPC dialogue events; the event set ID is referenced in the NPC's character data. However, inside EVNTSET0 there are also some general events used throughout the game, like cursed items, potions, documents that can be combined, etc.
+For every file in EVNTSET there should also be a file in EVNTTXT to go  with it.
+
 == Event set header ==
 || *Offset* || *Length* || *Name* ||
 ||0||2|| Number of active event blocks ||

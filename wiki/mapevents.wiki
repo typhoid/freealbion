@@ -107,6 +107,9 @@ word 8: event used for traps?
 === Map exit ===
  * for map transitions
 {{{
+byte 1: destination x position (if 0: keep current player x position)
+byte 2: destination y position (if 0: keep current player y position)
+byte 3: direction/rotation (0: up, 1: right, 2: down, 3: left)
 byte 4: always 255?
 word 6: map id/number
 }}}

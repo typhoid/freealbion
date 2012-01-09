@@ -10,7 +10,7 @@
 ||0||2|| Block number ||
 
 == Event blocks ==
- * 2 bytes per event block
+ * 12 bytes per event block
  * for the # of event blocks:
 || *Offset* || *Length* || *Name* ||
 ||0||1|| event type ||

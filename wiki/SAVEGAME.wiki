@@ -45,30 +45,4 @@ NPCCHAR1.XLD<br>
 NPCCHAR2.XLD<br>
 Before every XLD there are 8 bytes; the first 4 indicate the file size, the next 2 seem to indicate the data category (e.g. PRTCHAR or NPCCHAR) and the final 2 correlate with the number in the filename (0, 1, etc.).
 
-= PRTCHAR data =
-*TODO*: overall and character size (940 bytes?)
-
-== character data ==
-
-=== character attributes and misc values ===
-{{{
-[level]
-[face?]
-[15 bytes ?]
-[TP 2 bytes]
-[gold ((2 bytes)/10)]
-[rations]
-[10 bytes ?]
-}}}
-
-*TODO*: attributes
-
-=== character equipped items ===
-(9*6 bytes = 54 bytes)
-
-*TODO*: format
-
-=== character inventory ===
-(24*6 bytes = 144 bytes)
-
-*TODO*: format
+PRTCHARx.XLD: see [prtchar prtchar]

@@ -18,13 +18,14 @@
  * if #npc/monster (header byte 1) == 0x00: 32 `*` 10 bytes
  * if #npc/monster (header byte 1) == 0x40: 96 `*` 10 bytes
 || *Offset* || *Length* || *Name* || *Description* ||
-||0||1|| npc id|| npc id/mapping (if 0: dummy object) ||
-||1||1|| unknown || unknown ||
-||2||2|| unknown || possibly an event id? ||
-||4||1|| object id || object id (-> labdata) ||
-||5||2|| unknown || unknown ||
-||7||1|| movement type || movement type:<br> `*` bit 1/2: if bit 1 and/or 2 are set: random; if neither is set: use a 0x900 byte structure containing positioning data<br> `*` bit 3: unknown? sometimes set if bit 1 and 2 aren't set<br> `*` actual data: [MAPDATA3D#NPC/monster_position_structure] ||
-||8||2|| unknown || unknown ||
+||0||1|| npc id|| NPC-chardata/Monster-group or Message shown (see offset 6), dummy object if 0 ||
+||1||1|| sound || NPC Sound FX ||
+||2||2|| event || Linked event ID (upon any form of interaction) ||
+||4||1|| object id || object id (-> labdata, NPC gfx) ||
+||5||1|| unknown1 || unknown (part of object id?) ||
+||6||1|| activity || 01=Dialogue, 02=auto-attack, 11=return message ||
+||7||1|| movement type || movement type:<br> `*` bit 1/2: if bit 1 and/or 2 are set: random; if neither is set: use a 0x900 byte structure containing positioning data<br> `*` bit 3: follows party<br> `*` actual data: [MAPDATA3D#NPC/monster_position_structure] ||
+||8||2|| unknown2 || unknown ||
 
 == actual map data ==
  * 3 bytes per tile

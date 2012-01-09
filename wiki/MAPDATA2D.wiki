@@ -13,7 +13,7 @@
 ||9||1|| unknown2 || unknown ||
 
 == NPC/monster events ==
- * see [MAPDATA3D#NPC/monster_events]
+ * see [MAPDATA3D#NPC/monster_data]
 
 == map data ==
  * 3 bytes per tile

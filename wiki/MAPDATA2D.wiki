@@ -27,3 +27,9 @@
 
 == NPC/monster position structure ==
  * see [MAPDATA3D#NPC/monster_position_structure]
+
+== Active map events ==
+ * 2 bytes per event
+ * 250 total entries
+ * if a map event is not listed here, it cannot be triggered
+||0||2|| unknown1 || Block number of active event (0xFFFF=disabled) ||

@@ -88,6 +88,14 @@ bit 8: -
 }}}
 
 == specific event type descriptions ==
+=== Action ===
+ * catches a user action
+{{{
+byte 1: action type (00=word, 06=start dialogue, 08=dialogue line, 2E=use item, 2F=equip item, 30=unequip item, 36=pick up item in inventory)
+byte 3: text "BLOK" clicked (if byte 01=08)
+Word 6: word id (if byte 01=00) / text id (if byte 01=08) / item id (if byte 01=2E/2F/30/36)
+}}}
+
 === Chest ===
  * opens the chest screen
 {{{
@@ -103,13 +111,27 @@ byte 4: always 255?
 word 6: map id/number
 }}}
 
+=== Modify ===
+ * make in-game changes to events
+{{{
+byte 1: modify type (00=set temporary switch, 01=disable event chain)
+byte 3: chain number (only for modify type 01)
+word 6: switch id (only for modify type 00)
+}}}
+
 === Query ===
  * a conditional check for event branching
 {{{
-byte 1: query type (0=check switch, 14=check choice, 1F=window with two choices)
+byte 1: query type (0=check temporary switch, 14=check choice, 1F=window with two choices)
 word 6: switch id (if byte 1=00) / window text id (if byte 1=1F)
 word 8: next event (if switch is true / if second choice)
 next event: next event (if switch is false / if first choice)
+}}}
+
+=== Script ===
+ * executes a script
+{{{
+word 6: script id
 }}}
 
 === Simple chest ===

@@ -12,13 +12,13 @@
 ||8||1|| palette || map palette (0x01 - 0x38) ||
 ||9||1|| unknown || unknown ||
 
-== NPC/monster events ==
- * 10 bytes per event
+== NPC/monster data ==
+ * 10 bytes per NPC/monster
  * overall: #npc/monster `*` 10 bytes
  * if #npc/monster (header byte 1) == 0x00: 32 `*` 10 bytes
  * if #npc/monster (header byte 1) == 0x40: 96 `*` 10 bytes
 || *Offset* || *Length* || *Name* || *Description* ||
-||0||1|| npc id|| npc id/mapping (if 0: dummy event/object) ||
+||0||1|| npc id|| npc id/mapping (if 0: dummy object) ||
 ||1||1|| unknown || unknown ||
 ||2||2|| unknown || possibly an event id? ||
 ||4||1|| object id || object id (-> labdata) ||

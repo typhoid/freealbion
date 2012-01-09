@@ -65,4 +65,9 @@
 
 == automap gfx remapping structure ==
  * 0x40 Bytes
- * unknown structure: 0x80 bytes
+
+== Active map events ==
+ * 2 bytes per event
+ * 64 total entries
+ * if a map event is not listed here, it cannot be triggered
+||0||2|| block number || Block number of active event (0xFFFF=disabled) ||

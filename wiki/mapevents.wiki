@@ -96,11 +96,15 @@ word 6: map id/number
 
 === Query ===
 {{{
-word 8: next event/block ("event branching")
+byte 1: query type (0=check switch, 14=check choice, 1F=window with two choices)
+word 6: switch id (if byte 1=00) / window text id (if byte 1=1F)
+word 8: next event (if switch is true / if second choice)
+next event: next event (if switch is false / if first choice)
 }}}
 
 === Text ===
 {{{
-byte 1: text type (0 = window, 6 = quickinfo)
+byte 1: text type (0 = window, 2 = window with portrait, 6 = quickinfo)
+byte 4: portrait id
 byte 5: text id/number
 }}}

@@ -88,13 +88,23 @@ bit 8: -
 }}}
 
 == specific event type descriptions ==
+=== Chest ===
+ * opens the chest screen
+{{{
+byte 1: lock strength (00 = no lock; 01-63 = normal lock; > 63 = can't be picked)
+word 6: chest id
+word 8: event used for traps?
+}}}
+
 === Map exit ===
+ * for map transitions
 {{{
 byte 4: always 255?
 word 6: map id/number
 }}}
 
 === Query ===
+ * a conditional check for event branching
 {{{
 byte 1: query type (0=check switch, 14=check choice, 1F=window with two choices)
 word 6: switch id (if byte 1=00) / window text id (if byte 1=1F)
@@ -102,7 +112,15 @@ word 8: next event (if switch is true / if second choice)
 next event: next event (if switch is false / if first choice)
 }}}
 
+=== Simple chest ===
+ * gives you an item
+{{{
+word 6: item id
+word 8: could be the amount, for stackable items?
+}}}
+
 === Text ===
+ * outputs a text
 {{{
 byte 1: text type (0 = window, 2 = window with portrait, 6 = quickinfo)
 byte 4: portrait id

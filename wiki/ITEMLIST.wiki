@@ -4,7 +4,7 @@ There are 462 records this file and each record is 40 bytes long. It is believe 
 ||0||1||unknown||Always 0||
 ||1||1||typeid||[Items#Types Item type]||
 ||2||1||slotType||[Items#Slots Slot that can hold the item]||
-||3||1||unknown||||
+||3||1||breakrate||Chance to break the item||
 ||4||1||gender||Determines which gender can use this item. 2 = female, 3 = any||
 ||5||1||hands||Determines how many free hands are required to equip the item.||
 ||6||1||lpMaxBonus||Bonus value to life points.||
@@ -20,11 +20,11 @@ There are 462 records this file and each record is 40 bytes long. It is believe 
 ||16||1||skillTax2Type||Skill Tax 2 Type||
 ||17||1||skillTax1||Skill Tax 1 value. [Items#Ranged_Values Ranged Values]||
 ||18||1||skillTax2||Skill Tax 2 value. [Items#Ranged_Values Ranged Values]||
-||19||1||activate||Activate enables compass (0), monster eye (1) or clock (3)||
+||19||1||activate||Activate enables compass (0), monster eye (1) or clock (3) (if type=0x13) / Torch intensity (if type=0x16) ||
 ||20||1||ammoAnim||Ammo combat animation (long-range weapons only)||
 ||21||1||spellClass||[Items#Spell_Class Spell Class]||
 ||22||1||spellEffect||Spell id||
-||23||1||charges||Charges left in item||
+||23||1||charges||Charges left in item / Torch lifetime (if type=0x16)||
 ||24||1||enchantments||Number of times item was enchanted/recharged||
 ||25||1||maxEnchantments||Maximum possible enchantments||
 ||26||1||maxCharges||Maxiumum number of charges||
@@ -34,8 +34,8 @@ There are 462 records this file and each record is 40 bytes long. It is believe 
 ||30||2||weight||weight of the item in grammes||
 ||32||2||value||Base resell value / 10.||
 ||34||2||icon||Image for the item||
-||36||2||class||Appears to be a bitfield that controls which classes can use the item.||
-||38||2||race||Appears to be a bitfield that controls which race can use the item.||
+||36||2||class||A bitfield that controls which classes can use the item.||
+||38||2||race||Likely meant to control which race can use the item - but does not seem to work ?||
 
 
 Please be aware that these values are all derived from observation and not guaranteed to be correct.

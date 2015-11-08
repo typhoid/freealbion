@@ -1,0 +1,1 @@
+Each item has an icon associated with it. Each image is 16\*16 pixels in size with one byte per pixel. The images are indexed against PALETTE.000 (colors 192 - 255).

@@ -1,0 +1,1 @@
+Appear to be raw PCM audio. Not certain about the format of the PCM though (bit rate, channels, etc).
